@@ -1,0 +1,17 @@
+Udacity Robotics Nanodegree term 2 Project: Home  Service Robot Project.
+
+In this object I have:
+
+	1- modeled a real-world floor with the Builifin Editor in Gazebo.
+	2- created a map by teleoperating my robot around the world and saving a .pgm file.
+	3- used the ROS navigation stack to move the robot towards a 2D Navigation goal manually.
+	4- write a add_markers node tha can model a virtual object with markers in rviz.
+	5- write a pickup_objects node that commands my robot to move to the desired pickup and drop-off zones.
+	
+This project uses the following ROS packages:
+turtlebot package: holds my robot and all launch files to interface the packages with all required parts to be able to perform home service robot project.
+turtlebot_teleop package: provides teleoperation using joysticks or keyboard to send command to the robot for moving around the the world.
+gmapping package: uses laser to perform SLAM (Simultaneous Localization and Mapping) that create our world map to be used in localization task.
+amcl package: is a localization package that implements the adaptative(or KLD-sampling)  monte carlo approach, which uses a particle filter to estimate the pose of a robot into an known map;
+pick_objects package: pick_objects package: allows sending two goals the robot should navigate trough them uses ROS Navigation stack, the goals are assumed as the pick-up/drop-off location.
+add_markers package: add_markers package: allows communicating with the pick_objects package to helping simulates a green object at the picked-up/dropped-off supposed location.
